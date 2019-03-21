@@ -7,13 +7,13 @@ mobile: 600px);
 $color-theme: (primary: #8FD4F1,
 secondary: #3F3C75,
 tertiary: #060D20,
-highlight: #FAB724);
+highlight: #FC0);
 
 //Sterilize 
 body {
   margin: 0;
   padding: 0;
-  background-color: map-get($color-theme, primary);
+  background-color: #fff;
 }
 
 //Typography
@@ -60,8 +60,20 @@ h6 {
   font-size: 2rem;
 }
 
+//Grid
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr [content-start] minmax(0, map-get($breakpoints, laptop)) [content-end] 1fr;
 
+}
 
+.grid {
+  grid-column: content-start / content-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(map-get($breakpoints, tablet)/2, auto));
+}
+
+//layout
 section {
   display: flex;
   justify-content: center;
@@ -115,42 +127,52 @@ section {
 }
 
 
+
 #details {
-  display: grid;
-  grid-template-columns: 1fr [content-start] minmax(0, map-get($breakpoints, laptop)) [content-end] 1fr;
 
-  .grid {
-    grid-column: content-start / content-end;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
 
-    h3 {
-      font-size: 3rem;
-    }
+  h3 {
+    font-size: 3rem;
+  }
 
-    #info {
-      background-color: #999;
-    }
+  #info {
+    background-color: #999;
+  }
 
-    #experience {
-      background-color: #aaa;
-    }
+  #experience {
+    background-color: #aaa;
   }
 }
 
+footer {
+
+  border-bottom: 30px solid map-get($color-theme, tertiary);
+  background-color: map-get($color-theme, primary);
+  // border-bottom: 1px solid #444;
+}
+
 #contact {
-  height: 400px;
-  background-color: #999;
+  // height: 400px;
+
+  h5 {
+    text-align: center;
+    margin: 1rem 0;
+  }
 
   nav#social-icons {
     display: flex;
     flex-direction: column;
 
+
     a {
       color: #fff;
       text-decoration: none;
       font-size: 2rem;
-      padding: 8px 16px;
+      padding: 8px 16px 8px;
+
+      &:hover {
+        color: map-get($color-theme, highlight);
+      }
 
       span {
         font-family: inherit;
@@ -183,7 +205,6 @@ section {
 }
 
 #footer-background {
-  border-top: 30px solid map-get($color-theme, tertiary);
   background-attachment: fixed;
   background-image: url("../img/footer.jpg");
   background-size: cover;

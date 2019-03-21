@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #8FD4F1;
+  background-color: #fff;
 }
 
 h1,
@@ -44,6 +44,21 @@ h5 {
 
 h6 {
   font-size: 2rem;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr [content-start] minmax(0, 1200px) [content-end] 1fr;
+      grid-template-columns: 1fr [content-start] minmax(0, 1200px) [content-end] 1fr;
+}
+
+.grid {
+  grid-column: content-start / content-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(450px, auto))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(450px, auto));
 }
 
 section {
@@ -110,36 +125,26 @@ section {
   background-position: center;
 }
 
-#details {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr [content-start] minmax(0, 1200px) [content-end] 1fr;
-      grid-template-columns: 1fr [content-start] minmax(0, 1200px) [content-end] 1fr;
-}
-
-#details .grid {
-  grid-column: content-start / content-end;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(300px, auto))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-}
-
-#details .grid h3 {
+#details h3 {
   font-size: 3rem;
 }
 
-#details .grid #info {
+#details #info {
   background-color: #999;
 }
 
-#details .grid #experience {
+#details #experience {
   background-color: #aaa;
 }
 
-#contact {
-  height: 400px;
-  background-color: #999;
+footer {
+  border-bottom: 30px solid #060D20;
+  background-color: #8FD4F1;
+}
+
+#contact h5 {
+  text-align: center;
+  margin: 1rem 0;
 }
 
 #contact nav#social-icons {
@@ -156,7 +161,11 @@ section {
   color: #fff;
   text-decoration: none;
   font-size: 2rem;
-  padding: 8px 16px;
+  padding: 8px 16px 8px;
+}
+
+#contact nav#social-icons a:hover {
+  color: #FC0;
 }
 
 #contact nav#social-icons a span {
@@ -185,7 +194,6 @@ section {
 }
 
 #footer-background {
-  border-top: 30px solid #060D20;
   background-attachment: fixed;
   background-image: url("../img/footer.jpg");
   background-size: cover;
