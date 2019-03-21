@@ -1,0 +1,204 @@
+//Variables
+
+$breakpoints: (laptop: 1200px,
+tablet: 900px,
+mobile: 600px);
+
+$color-theme: (primary: #8FD4F1,
+secondary: #3F3C75,
+tertiary: #060D20,
+highlight: #FAB724);
+
+//Sterilize 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: map-get($color-theme, primary);
+}
+
+//Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Jura, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+}
+
+p {
+  font-family: Lato, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+  font-family: "Share Tech Mono", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+h1 {
+  font-size: 7.5rem;
+
+}
+
+h2 {
+  font-size: 7rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 5rem;
+}
+
+h5 {
+  font-size: 4rem;
+}
+
+h6 {
+  font-size: 2rem;
+}
+
+
+
+section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  // border: 1px solid red;
+}
+
+#site-title {
+  background: linear-gradient(map-get($color-theme, tertiary), map-get($color-theme, primary));
+  height: 200px;
+
+  h1 {
+    text-align: center;
+    color: #fff;
+  }
+}
+
+#top-nav {
+  position: sticky;
+  top: 0;
+  background-color: map-get($color-theme, primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  nav {
+    display: flex;
+    width: map-get($breakpoints, laptop);
+    justify-content: space-between;
+
+    a {
+      font-size: 1.5rem;
+      text-align: center;
+      width: 100%;
+      padding: 1em 0;
+      text-decoration: none;
+      color: map-get($color-theme, tertiary);
+
+      &:hover {
+        background-color: lighten(map-get($color-theme, primary), 20%);
+      }
+    }
+  }
+}
+
+#hero {
+  height: 100vh;
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  // background-attachment: fixed;
+}
+
+
+#details {
+  display: grid;
+  grid-template-columns: 1fr [content-start] minmax(0, map-get($breakpoints, laptop)) [content-end] 1fr;
+
+  .grid {
+    grid-column: content-start / content-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+
+    h3 {
+      font-size: 3rem;
+    }
+
+    #info {
+      background-color: #999;
+    }
+
+    #experience {
+      background-color: #aaa;
+    }
+  }
+}
+
+#contact {
+  height: 400px;
+  background-color: #999;
+
+  nav#social-icons {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 2rem;
+      padding: 8px 16px;
+
+      span {
+        font-family: inherit;
+      }
+    }
+
+    .codepen {
+      background-color: #000;
+    }
+
+    .twitter {
+      background-color: #38A1F3;
+    }
+
+    .github {
+      background-color: #000;
+
+    }
+  }
+}
+
+#footer-gap {
+  background-color: map-get($color-theme, tertiary);
+  height: 30px;
+
+
+  span {
+    color: #fff;
+  }
+}
+
+#footer-background {
+  border-top: 30px solid map-get($color-theme, tertiary);
+  background-attachment: fixed;
+  background-image: url("../img/footer.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#sub-footer {
+  background-color: map-get($color-theme, tertiary);
+  color: #fff;
+  position: sticky;
+  bottom: 0;
+  height: 76px;
+
+  h6 {
+    margin: 20px 0;
+  }
+}

@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #8FD4F1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Jura, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+}
+
+p {
+  font-family: Lato, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+  font-family: "Share Tech Mono", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 7.5rem;
+}
+
+h2 {
+  font-size: 7rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 5rem;
+}
+
+h5 {
+  font-size: 4rem;
+}
+
+h6 {
+  font-size: 2rem;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#site-title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#060D20), to(#8FD4F1));
+  background: linear-gradient(#060D20, #8FD4F1);
+  height: 200px;
+}
+
+#site-title h1 {
+  text-align: center;
+  color: #fff;
+}
+
+#top-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #8FD4F1;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#top-nav nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1200px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#top-nav nav a {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  padding: 1em 0;
+  text-decoration: none;
+  color: #060D20;
+}
+
+#top-nav nav a:hover {
+  background-color: #eaf7fc;
+}
+
+#hero {
+  height: 100vh;
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr [content-start] minmax(0, 1200px) [content-end] 1fr;
+      grid-template-columns: 1fr [content-start] minmax(0, 1200px) [content-end] 1fr;
+}
+
+#details .grid {
+  grid-column: content-start / content-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, auto))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+}
+
+#details .grid h3 {
+  font-size: 3rem;
+}
+
+#details .grid #info {
+  background-color: #999;
+}
+
+#details .grid #experience {
+  background-color: #aaa;
+}
+
+#contact {
+  height: 400px;
+  background-color: #999;
+}
+
+#contact nav#social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact nav#social-icons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 8px 16px;
+}
+
+#contact nav#social-icons a span {
+  font-family: inherit;
+}
+
+#contact nav#social-icons .codepen {
+  background-color: #000;
+}
+
+#contact nav#social-icons .twitter {
+  background-color: #38A1F3;
+}
+
+#contact nav#social-icons .github {
+  background-color: #000;
+}
+
+#footer-gap {
+  background-color: #060D20;
+  height: 30px;
+}
+
+#footer-gap span {
+  color: #fff;
+}
+
+#footer-background {
+  border-top: 30px solid #060D20;
+  background-attachment: fixed;
+  background-image: url("../img/footer.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#sub-footer {
+  background-color: #060D20;
+  color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  height: 76px;
+}
+
+#sub-footer h6 {
+  margin: 20px 0;
+}
+/*# sourceMappingURL=styles.css.map */
