@@ -61,6 +61,14 @@ h6 {
       grid-template-columns: repeat(auto-fit, minmax(450px, auto));
 }
 
+.cell {
+  padding: 10px;
+}
+
+.nopad {
+  padding: 0;
+}
+
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,9 +84,9 @@ section {
 }
 
 #site-title {
-  background: -webkit-gradient(linear, left top, left bottom, from(#060D20), to(#8FD4F1));
-  background: linear-gradient(#060D20, #8FD4F1);
+  background: #4D88C2;
   height: 200px;
+  z-index: 5000;
 }
 
 #site-title h1 {
@@ -90,9 +98,9 @@ section {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: #8FD4F1;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #4D88C2;
+  -webkit-box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 #top-nav nav {
@@ -115,14 +123,19 @@ section {
 }
 
 #top-nav nav a:hover {
-  background-color: #eaf7fc;
+  background-color: #99bbdc;
 }
 
 #hero {
-  height: 100vh;
-  background-image: url("../img/hero.jpg");
+  height: calc(100vh - 75px);
+  background-image: url("../img/test2.jpg");
   background-size: cover;
   background-position: center;
+}
+
+#hero article {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
 }
 
 #details h3 {
@@ -139,7 +152,8 @@ section {
 
 footer {
   border-bottom: 30px solid #060D20;
-  background-color: #8FD4F1;
+  background-color: #3F3C75;
+  color: #fff;
 }
 
 #contact h5 {
