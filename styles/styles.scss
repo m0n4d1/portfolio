@@ -24,7 +24,10 @@ highlight: #F33045);
   color: balance-color($bg-color);
 }
 
-
+* {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
 
 
 
@@ -44,7 +47,7 @@ h5,
 h6 {
   font-family: Jura, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
-  margin: 2.5% 0;
+  margin: 3% 0;
 }
 
 p {
@@ -56,7 +59,7 @@ a {
 }
 
 h1 {
-  font-size: 7.5rem;
+  font-size: calc(50vw * .25);
 }
 
 h2 {
@@ -94,6 +97,7 @@ h6 {
   grid-column: content-start / content-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(map-get($breakpoints, tablet)/2, auto));
+
 }
 
 .cell {
@@ -121,12 +125,16 @@ iframe {
   height: 400px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75);
   // margin: 0 auto;
+  width: 100%;
+  max-width: 100vw;
 }
+
+article {}
 
 #site-title {
   // background: linear-gradient(map-get($color-theme, tertiary), map-get($color-theme, primary));
   background: map-get($color-theme, primary);
-  height: 200px;
+  // height: 200px;
   z-index: 5000;
 
   h1 {
@@ -156,7 +164,7 @@ iframe {
       padding: 1em 0;
       text-decoration: none;
       color: map-get($color-theme, tertiary);
-
+      transition: all .15s ease-out;
 
       &:hover {
         background-color: lighten(map-get($color-theme, primary), 20%);
@@ -206,8 +214,8 @@ iframe {
   @include set-colors(#eee);
 
   div {
-    grid-gap: 20px;
-    padding-bottom: 40px;
+    grid-gap: 10px;
+    padding-bottom: 20px;
   }
 }
 
@@ -230,10 +238,11 @@ footer {
     flex-direction: column;
 
     a {
+      box-sizing: border-box;
       color: #fff;
       text-decoration: none;
       font-size: 2rem;
-      padding: 8px 16px 8px 15%;
+      padding: 8px 16px;
       transition: all .15s ease-out;
 
       &:hover {
@@ -283,7 +292,7 @@ footer {
   color: #fff;
   position: sticky;
   bottom: 0;
-  height: 76px;
+  height: 75px;
 
   h6 {
     margin: 20px 0;
