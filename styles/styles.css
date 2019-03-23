@@ -12,6 +12,7 @@ h5,
 h6 {
   font-family: Jura, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
+  margin: 2.5% 0;
 }
 
 p {
@@ -35,7 +36,7 @@ h3 {
 }
 
 h4 {
-  font-size: 5rem;
+  font-size: 2rem;
 }
 
 h5 {
@@ -44,6 +45,10 @@ h5 {
 
 h6 {
   font-size: 2rem;
+}
+
+.center {
+  text-align: center;
 }
 
 .grid-container {
@@ -62,7 +67,11 @@ h6 {
 }
 
 .cell {
-  padding: 10px;
+  padding: 1rem;
+}
+
+.fill-row {
+  grid-column: 1/-1;
 }
 
 .nopad {
@@ -83,6 +92,12 @@ section {
           align-items: center;
 }
 
+iframe {
+  height: 400px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75);
+}
+
 #site-title {
   background: #4D88C2;
   height: 200px;
@@ -92,6 +107,7 @@ section {
 #site-title h1 {
   text-align: center;
   color: #fff;
+  font-family: "Share Tech Mono";
 }
 
 #top-nav {
@@ -128,14 +144,24 @@ section {
 
 #hero {
   height: calc(100vh - 75px);
+  background-color: #4D88C2;
   background-image: url("../img/test2.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #hero article {
-  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  max-width: 1500px;
   text-align: center;
+  text-shadow: 0 1px 4px #000;
+}
+
+#hero article p {
+  font-size: 1.2rem;
 }
 
 #details h3 {
@@ -148,6 +174,16 @@ section {
 
 #details #experience {
   background-color: #aaa;
+}
+
+#my-works {
+  background-color: #eee;
+  color: #000;
+}
+
+#my-works div {
+  grid-gap: 20px;
+  padding-bottom: 40px;
 }
 
 footer {
@@ -175,11 +211,13 @@ footer {
   color: #fff;
   text-decoration: none;
   font-size: 2rem;
-  padding: 8px 16px 8px;
+  padding: 8px 16px 8px 15%;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
 }
 
 #contact nav#social-icons a:hover {
-  color: #FC0;
+  color: #F33045;
 }
 
 #contact nav#social-icons a span {

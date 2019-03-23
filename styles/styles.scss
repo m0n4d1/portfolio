@@ -7,7 +7,7 @@ mobile: 600px);
 $color-theme: (primary: #4D88C2,
 secondary: #3F3C75,
 tertiary: #060D20,
-highlight: #FC0);
+highlight: #F33045);
 
 @function balance-color($color) {
   @if lightness($color)>=50 {
@@ -21,8 +21,11 @@ highlight: #FC0);
 
 @mixin set-colors($bg-color) {
   background-color: $bg-color;
-  color: balance-color($bg-color)
+  color: balance-color($bg-color);
 }
+
+
+
 
 
 //Sterilize 
@@ -41,6 +44,7 @@ h5,
 h6 {
   font-family: Jura, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 100;
+  margin: 2.5% 0;
 }
 
 p {
@@ -53,7 +57,6 @@ a {
 
 h1 {
   font-size: 7.5rem;
-
 }
 
 h2 {
@@ -65,7 +68,7 @@ h3 {
 }
 
 h4 {
-  font-size: 5rem;
+  font-size: 2rem;
 }
 
 h5 {
@@ -74,6 +77,10 @@ h5 {
 
 h6 {
   font-size: 2rem;
+}
+
+.center {
+  text-align: center;
 }
 
 //Grid
@@ -90,7 +97,11 @@ h6 {
 }
 
 .cell {
-  padding: 10px;
+  padding: 1rem;
+}
+
+.fill-row {
+  grid-column: 1/-1;
 }
 
 .nopad {
@@ -106,6 +117,12 @@ section {
   // border: 1px solid red;
 }
 
+iframe {
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75);
+  // margin: 0 auto;
+}
+
 #site-title {
   // background: linear-gradient(map-get($color-theme, tertiary), map-get($color-theme, primary));
   background: map-get($color-theme, primary);
@@ -113,8 +130,11 @@ section {
   z-index: 5000;
 
   h1 {
+    // max-width: map-get($breakpoints, laptop);
     text-align: center;
     color: #fff;
+    // font-weight: 100;
+    font-family: "Share Tech Mono";
   }
 }
 
@@ -137,6 +157,7 @@ section {
       text-decoration: none;
       color: map-get($color-theme, tertiary);
 
+
       &:hover {
         background-color: lighten(map-get($color-theme, primary), 20%);
       }
@@ -146,17 +167,23 @@ section {
 
 #hero {
   height: calc(100vh - 75px);
+  background-color: map-get($color-theme, primary);
   background-image: url("../img/test2.jpg");
   background-size: cover;
   background-position: center;
 
   article {
-    background-color: rgba(#fff, 0.5);
-
+    box-sizing: border-box;
+    @include set-colors(rgba(0, 0, 0, 0.75));
+    max-width: map-get($breakpoints, laptop) + 300px;
     text-align: center;
+    text-shadow: 0 1px 4px #000;
+
+    p {
+      font-size: 1.2rem;
+    }
   }
 }
-
 
 
 #details {
@@ -175,15 +202,23 @@ section {
   }
 }
 
+#my-works {
+  @include set-colors(#eee);
+
+  div {
+    grid-gap: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+
 footer {
 
   border-bottom: 30px solid map-get($color-theme, tertiary);
   @include set-colors(map-get($color-theme, secondary));
-  // border-bottom: 1px solid #444;
 }
 
 #contact {
-  // height: 400px;
 
   h5 {
     text-align: center;
@@ -194,12 +229,12 @@ footer {
     display: flex;
     flex-direction: column;
 
-
     a {
       color: #fff;
       text-decoration: none;
       font-size: 2rem;
-      padding: 8px 16px 8px;
+      padding: 8px 16px 8px 15%;
+      transition: all .15s ease-out;
 
       &:hover {
         color: map-get($color-theme, highlight);
@@ -216,11 +251,12 @@ footer {
 
     .twitter {
       background-color: #38A1F3;
+
+
     }
 
     .github {
       background-color: #000;
-
     }
   }
 }
@@ -228,7 +264,6 @@ footer {
 #footer-gap {
   background-color: map-get($color-theme, tertiary);
   height: 30px;
-
 
   span {
     color: #fff;
