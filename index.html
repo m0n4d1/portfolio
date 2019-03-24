@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#4D88C2">
   <link href="https://fonts.googleapis.com/css?family=Jura|Raleway|Lato|Share+Tech+Mono&effect=3d" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/brands.css"
     integrity="sha384-5G2m52y/zN053yjBCyNXXotYpL2r5k1wg9aakiM5OgK9kdcCB68EECUce5vZiz/8" crossorigin="anonymous">
@@ -17,7 +18,6 @@
 
 <body>
   <div>
-
     <section id="site-title">
       <h1 class="font-effect-3d">M0n4d</h1>
     </section>
@@ -29,7 +29,6 @@
       </nav>
     </section>
     <main>
-
       <section id="hero">
         <article class="cell">
           <h3>Welcome</h3>
@@ -37,14 +36,15 @@
             recursion and pure functions. </p>
         </article>
       </section>
-      <section id="about-me" class="grid-container">
+      <section id="about-me" class="grid-container target-offset">
         <div class="grid">
           <h3 class="cell fill-row center">About Me</h3>
           <article class="cell fill-row">
             <h4>A Brief Introduction</h4>
             <p>I have been toying with front end technologies in my spare time for around 1 year. I now study
               full time
-              at a fullstack web development bootcamp in Brisbane called <a href="#" target="_blank">Coder Academy</a>.
+              at a fullstack web development bootcamp in Brisbane called <a href="https://coderacademy.edu.au"
+                target="_blank">Coder Academy</a>.
               Whist
               most of my experience has been performing intricate css gymnastics on codepen, I am currently being taught
               programming fundamentals and loving it.
@@ -52,76 +52,82 @@
             <p> I particularly like the logic and math I am learning and often study it
               in my spare time.</p>
           </article>
-          <img src="/img/recursion.jpg" alt="image illustrating recursion">
-          <!-- <img src="/img/morpheus.jpg" alt="morpheus meme about recursion"> -->
-
+          <img class="cell" src="/img/recursion.jpeg" alt="image illustrating recursion">
           <article class="cell">
             <h4>My Functional World</h4>
-            <p>Tempor amet veniam occaecat id aute Lorem ea quis sint. Ut magna sit veniam incididunt elit amet
-              reprehenderit laboris culpa sint. Voluptate incididunt officia ex ut do occaecat ex magna ipsum nostrud.
-              Mollit nisi sit Lorem irure quis ullamco fugiat.
+            <p>I have been investigating functional programming for a short while and find it to be most intuitive. I am
+              learning Haskell and it is wonderfully permissive of all the things I have been trying to coerce other
+              languages into doing. Treating programs as sets of transformations on data aligns very well with my
+              default
+              mode of thinking. I love the declarative and concise nature recursive algorithms although unfortunately
+              most
+              imperative languages
+              consult memory when calling a function which limits the effectiveness of recursion.
             </p>
           </article>
         </div>
       </section>
-      <section id="my-works" class="grid-container">
-        <div class="grid">
+      <div class="grid ">
+        <section id="my-works" class="grid-container target-offset">
+          <div class="grid">
 
-          <h3 class="fill-row center">My Works</h3>
+            <h3 class="fill-row center">My Works</h3>
 
-          <iframe scrolling="no" title="CSS Grid Audio bar graph"
-            src="//codepen.io/m0n4d/embed/preview/daymXe/?height=265&theme-id=0&default-tab=result" frameborder="no"
-            allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href='https://codepen.io/m0n4d/pen/daymXe/'>CSS Grid Audio bar graph</a> by M0n4d
-            (<a href='https://codepen.io/m0n4d'>@m0n4d</a>) on <a href='https://codepen.io'>CodePen</a>.
-          </iframe>
+            <iframe scrolling="no" title="CSS Grid Audio bar graph"
+              src="//codepen.io/m0n4d/embed/preview/daymXe/?height=265&theme-id=0&default-tab=result" frameborder="no"
+              allowtransparency="true" allowfullscreen="true">
+              See the Pen <a href='https://codepen.io/m0n4d/pen/daymXe/'>CSS Grid Audio bar graph</a> by M0n4d
+              (<a href='https://codepen.io/m0n4d'>@m0n4d</a>) on <a href='https://codepen.io'>CodePen</a>.
+            </iframe>
 
-          <iframe scrolling="no" title="CSS Wall Clock"
-            src="//codepen.io/m0n4d/embed/preview/ejPJpd/?height=265&theme-id=0&default-tab=result" frameborder="no"
-            allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href='https://codepen.io/m0n4d/pen/ejPJpd/'>CSS Wall Clock</a> by M0n4d
-            (<a href='https://codepen.io/m0n4d'>@m0n4d</a>) on <a href='https://codepen.io'>CodePen</a>.
-          </iframe>
+            <iframe scrolling="no" title="CSS Wall Clock"
+              src="//codepen.io/m0n4d/embed/preview/ejPJpd/?height=265&theme-id=0&default-tab=result" frameborder="no"
+              allowtransparency="true" allowfullscreen="true">
+              See the Pen <a href='https://codepen.io/m0n4d/pen/ejPJpd/'>CSS Wall Clock</a> by M0n4d
+              (<a href='https://codepen.io/m0n4d'>@m0n4d</a>) on <a href='https://codepen.io'>CodePen</a>.
+            </iframe>
 
-          <iframe scrolling="no" title="CSS Grid WavePool"
-            src="//codepen.io/m0n4d/embed/preview/ajKdOR/?height=265&theme-id=0&default-tab=result" frameborder="no"
-            allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href='https://codepen.io/m0n4d/pen/ajKdOR/'>CSS Grid WavePool</a> by M0n4d
-            (<a href='https://codepen.io/m0n4d'>@m0n4d</a>) on <a href='https://codepen.io'>CodePen</a>.
-          </iframe>
+            <iframe scrolling="no" title="CSS Grid WavePool"
+              src="//codepen.io/m0n4d/embed/preview/ajKdOR/?height=265&theme-id=0&default-tab=result" frameborder="no"
+              allowtransparency="true" allowfullscreen="true">
+              See the Pen <a href='https://codepen.io/m0n4d/pen/ajKdOR/'>CSS Grid WavePool</a> by M0n4d
+              (<a href='https://codepen.io/m0n4d'>@m0n4d</a>) on <a href='https://codepen.io'>CodePen</a>.
+            </iframe>
 
-          <iframe scrolling="no" title="React Login Form"
-            src="//codepen.io/m0n4d/embed/preview/qJBazW/?height=265&theme-id=0&default-tab=result" frameborder="no"
-            allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href='https://codepen.io/m0n4d/pen/qJBazW/'>React Login Form</a> by M0n4d
-            (<a href='https://codepen.io/m0n4d'>@m0n4d</a>) on <a href='https://codepen.io'>CodePen</a>.
-          </iframe>
+            <iframe scrolling="no" title="React Login Form"
+              src="//codepen.io/m0n4d/embed/preview/qJBazW/?height=265&theme-id=0&default-tab=result" frameborder="no"
+              allowtransparency="true" allowfullscreen="true">
+              See the Pen <a href='https://codepen.io/m0n4d/pen/qJBazW/'>React Login Form</a> by M0n4d
+              (<a href='https://codepen.io/m0n4d'>@m0n4d</a>) on <a href='https://codepen.io'>CodePen</a>.
+            </iframe>
 
-        </div>
+          </div>
 
-      </section>
+        </section>
     </main>
   </div>
   <footer class="grid-container">
-    <section id="contact" class="grid">
+    <section id="contact" class="grid target-offset">
       <div class="cell">
-        <p>Dolore enim ut incididunt dolor veniam incididunt ullamco mollit tempor Lorem anim veniam. Aliqua aliquip
-          consectetur anim sint culpa minim aute excepteur dolor sint magna minim. Ad veniam aliqua officia
-          reprehenderit aliqua nostrud sit ex deserunt occaecat. Voluptate est tempor sit elit aliqua id ex sint
-          voluptate anim cupidatat.</p>
+        <h4>Contact Me</h4>
+        <p>
+          Feel free to contact me on any of my social media accounts or at <a
+            href="mailto:m0n4d1000@gmail.com">m0n4d1000@gmail.com</a>. I'm not currently looking for work but if you're
+          using functional languages in your stack I may consider an offer.
+        </p>
       </div>
       <div class="cell nopad">
         <h5>Social Media</h5>
         <nav id="social-icons">
-          <a class="codepen" href="">
+          <a class="codepen" href="https://codepen.io/m0n4d/" target="_blank">
             <i class="fab fa-codepen"></i>
             <span>codepen</span>
           </a>
-          <a class="twitter" href="">
+          <a class="twitter" href="https://twitter.com/M0n4d1" target="_blank">
             <i class="fab fa-twitter"></i>
             <span>twitter</span>
           </a>
-          <a class="github" href="">
+          <a class="github" href="https://github.com/m0n4d1" target="_blank">
             <i class="fab fa-github"></i>
             <span>github</span>
           </a>
@@ -129,8 +135,6 @@
       </div>
     </section>
   </footer>
-  <!-- <section id="footer-gap">
-  </section> -->
   <div>
     <section id="footer-background">
 

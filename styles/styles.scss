@@ -99,7 +99,6 @@ h6 {
   grid-column: content-start / content-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(map-get($breakpoints, tablet)/2, auto));
-
 }
 
 .cell {
@@ -122,18 +121,22 @@ img {
 }
 
 //layout
+.target-offset {
+  margin-top: -75px;
+  padding-top: 75px;
+}
+
 section {
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
-  // border: 1px solid red;
+  position: relative;
 }
 
 iframe {
   height: 400px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75);
-  // margin: 0 auto;
   width: 100%;
   max-width: 100vw;
 }
@@ -145,16 +148,12 @@ article {
 }
 
 #site-title {
-  // background: linear-gradient(map-get($color-theme, tertiary), map-get($color-theme, primary));
   background: map-get($color-theme, primary);
-  // height: 200px;
   z-index: 5000;
 
   h1 {
-    // max-width: map-get($breakpoints, laptop);
     text-align: center;
     color: #fff;
-    // font-weight: 100;
     font-family: "Share Tech Mono";
   }
 }
@@ -164,6 +163,7 @@ article {
   top: 0;
   background-color: map-get($color-theme, primary);
   box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
+  z-index: 100;
 
   nav {
     display: flex;
@@ -192,6 +192,7 @@ article {
   background-image: url("../img/test2.jpg");
   background-size: cover;
   background-position: center;
+  z-index: 10;
 
   article {
     box-sizing: border-box;
@@ -208,14 +209,12 @@ article {
 }
 
 #about-me {
-  @include set-colors(#eee);
+  z-index: 9;
+  @include set-colors(#fff);
 
   article {
-    border: 1px solid #ccc;
-    @include set-colors(#fff);
-
-    &:last-of-type {
-      border-top: none;
+    a {
+      color: map-get($color-theme, primary);
     }
   }
 
@@ -223,6 +222,7 @@ article {
 }
 
 #my-works {
+  z-index: 8;
   @include set-colors(#222);
   background-image: url("../img/footer.jpg");
   background-size: cover;
@@ -237,9 +237,9 @@ article {
 
 
 footer {
-
+  z-index: 7;
   border-bottom: 30px solid #000;
-  @include set-colors(map-get($color-theme, secondary));
+  @include set-colors(darken(map-get($color-theme, secondary), 15%));
 }
 
 #contact {
@@ -247,6 +247,10 @@ footer {
   h5 {
     text-align: center;
     margin: 1rem 0;
+  }
+
+  a {
+    color: map-get($color-theme, primary);
   }
 
   nav#social-icons {
@@ -285,7 +289,6 @@ footer {
     }
   }
 }
-
 
 
 #footer-background {
