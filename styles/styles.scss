@@ -190,7 +190,7 @@ article {
 #hero {
   height: calc(100vh - 75px);
   background-color: map-get($color-theme, primary);
-  background-image: url("../img/test2.jpg");
+  background-image: url("../img/hero.jpg");
   background-size: cover;
   background-position: center;
   z-index: 10;
@@ -225,7 +225,7 @@ article {
 #my-works {
   z-index: 8;
   @include set-colors(#222);
-  background-image: url("../img/footer.jpg");
+  background-image: url("../img/circuit.jpg");
   background-size: cover;
   background-position: center;
 
