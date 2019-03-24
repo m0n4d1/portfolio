@@ -75,11 +75,3 @@ Site was designed responsive for viewports > 300px
 ![Trello board 1](docs/trello_1.png)
 ![Trello board 2](docs/trello_2.png)
 ![Trello board 3](docs/trello_3.png)
-
-## Short Answer Q&A
-
-### Describe key events in the development of the internet from the 1980s to today (max. 150 words)
-
-### Define and describes the relationship between fundamental aspects of the internet such as: domains, web servers, DNS, and web browsers (max. 150 words)
-
-### Reflect on one aspect of the development of internet technologies and how it has contributed to the world today (max. 150 words)
