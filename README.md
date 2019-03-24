@@ -8,7 +8,7 @@
 
 ### Purpose
 
-A basic showcase of my work and overview of my interests programmer.
+A basic showcase of my work and overview of my interests as a programmer.
 
 ### Functionality / features
 
@@ -46,6 +46,10 @@ Html, Scss, gh-pages
 
 The design process for this project was very straight forward. Build moodboard -> draw wireframes -> prototype -> iterate until complete.
 
+### Moodboard
+
+![moodboard](docs/moodboard1.png)
+
 ### Wireframes
 
 ![wireframes](docs/wireframes.jpg)
@@ -53,6 +57,10 @@ The design process for this project was very straight forward. Build moodboard -
 ### Usability considerations
 
 Site was designed responsive for viewports > 300px
+
+### audit
+
+![audit](docs/audit.png)
 
 ### Project plan & timeline
 
@@ -67,3 +75,11 @@ Site was designed responsive for viewports > 300px
 ![Trello board 1](docs/trello_1.png)
 ![Trello board 2](docs/trello_2.png)
 ![Trello board 3](docs/trello_3.png)
+
+## Short Answer Q&A
+
+### Describe key events in the development of the internet from the 1980s to today (max. 150 words)
+
+### Define and describes the relationship between fundamental aspects of the internet such as: domains, web servers, DNS, and web browsers (max. 150 words)
+
+### Reflect on one aspect of the development of internet technologies and how it has contributed to the world today (max. 150 words)
